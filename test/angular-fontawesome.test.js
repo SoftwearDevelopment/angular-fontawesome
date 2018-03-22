@@ -4,7 +4,7 @@
 
 describe('angular-fontawesome', function () {
 
-  beforeEach(module('picardy.fontawesome'));
+  beforeEach(module('sw-fontawesome'));
 
   afterEach(inject(function ($rootScope) {
     delete $rootScope.options;
@@ -20,7 +20,7 @@ describe('angular-fontawesome', function () {
     }));
 
     it('should have the fa class all the time', function () {
-       expect(elm.hasClass('fa')).toBe(true);
+       expect(elm.hasClass('fas')).toBe(true);
     });
   });
 
@@ -566,7 +566,7 @@ describe('angular-fontawesome', function () {
         scope.options.color = 'blue';
         scope.$digest();
 
-        expect(elm.hasClass('fa')).toBe(true);
+        expect(elm.hasClass('fas')).toBe(true);
         expect(elm.hasClass('fa-square')).toBe(true);
         expect(elm.hasClass('boom')).toBe(false);
         expect(elm.css('color')).toBe('blue');
@@ -576,7 +576,7 @@ describe('angular-fontawesome', function () {
         scope.options.booming = true;
         scope.$digest();
 
-        expect(elm.hasClass('fa')).toBe(true);
+        expect(elm.hasClass('fas')).toBe(true);
         expect(elm.hasClass('fa-envelope')).toBe(true);
         expect(elm.hasClass('fa-square')).not.toBe(true);
         expect(elm.hasClass('boom')).toBe(true);

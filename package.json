@@ -1,10 +1,11 @@
 {
   "name": "angular-fontawesome",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Paul Marbach <paul@picardylearning.com>",
   "description": "Angular directive for FontAwesome",
   "scripts": {
-    "test": "./node_modules/bower/bin/bower install; ./node_modules/karma/bin/karma start --browsers Firefox --single-run"
+    "test": "./node_modules/bower/bin/bower install; ./node_modules/karma/bin/karma start --browsers Chrome --single-run",
+    "release": "grunt release"
   },
   "main": "dist/angular-fontawesome.js",
   "repository": {
@@ -30,6 +31,7 @@
     "grunt-eslint": "^17.2.0",
     "grunt-gh-pages": "^0.10.0",
     "grunt-karma": "^0.8.2",
+    "jasmine-core": "^3.1.0",
     "karma": "^0.12.9",
     "karma-chrome-launcher": "0.1.7",
     "karma-firefox-launcher": "0.1.4",
@@ -39,5 +41,8 @@
     "karma-phantomjs-launcher": "0.1.4",
     "karma-safari-launcher": "0.1.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.4"
+  }
 }

@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('picardy.fontawesome', [])
+angular.module('sw-fontawesome', [])
   .directive('fa', function () {
     return {
       restrict: 'E',
-      template: '<span class="fa" aria-hidden="true"></span>',
+      template: '<span class="fas" aria-hidden="true"></span>',
       replace: true,
       link: function (scope, element, attrs) {
 

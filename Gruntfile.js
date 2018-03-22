@@ -48,7 +48,7 @@ module.exports = function (grunt) {
       all: {
         configFile: 'karma.conf.js',
         options: {
-          browsers: ['Chrome', 'Safari', 'Firefox']
+          browsers: ['Chrome']
         }
       },
       phantomjs: {
