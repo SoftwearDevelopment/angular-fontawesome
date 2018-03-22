@@ -4,7 +4,7 @@ angular.module('sw-fontawesome', [])
   .directive('fa', function () {
     return {
       restrict: 'E',
-      template: '<span class="fas" aria-hidden="true"></span>',
+      template: '<span aria-hidden="true"></span>',
       replace: true,
       link: function (scope, element, attrs) {
 
@@ -12,6 +12,10 @@ angular.module('sw-fontawesome', [])
         // keep a state of the current attrs so that when they change,
         // we can remove the old attrs before adding the new ones.
         var currentClasses = {};
+        var faIconSet = attrs.set || 'fas';
+
+        // Add the base fas class by default unless it us overriden by set
+        element.addClass(faIconSet);
 
         // generic function to bind string attrs
         function _observeStringAttr (attr, baseClass) {
