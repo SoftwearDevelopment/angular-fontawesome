@@ -14,7 +14,7 @@ A simple directive for [FontAwesome 5](https://fontawesome.com/) icons. Avoid wr
     <fa name="spinner" spin ng-style="{'color': checkColor}"></fa>
     <!-- $scope.checkColor = 'blue' -->
     <!-- rendered -->
-    <i class="fa fa-spinner fa-spin" style="color:blue;"></i>
+    <i class="fas fa-spinner fa-spin" style="color:blue;"></i>
     ```
 
 ### Attributes
@@ -27,6 +27,7 @@ The `fa` directive's attributes map to the classes used by FontAwesome\.
     size="1-5|large"
     flip="horizontal|vertical"
     rotate="90|180|270"
+    set="fab|far|fal"
     spin
     border
     list
@@ -38,7 +39,7 @@ The icon's [name](http://fontawesome.io/icons/), such as `fa-spinner` or `fa-squ
 ```html
 <fa name="github"></fa>
 <!-- rendered -->
-<i class="fa fa-github"></i>
+<i class="fas fa-github"></i>
 ```
 
 ##### alt
@@ -46,7 +47,7 @@ For accessibility support, you can now add an *alt* attribute, which will add a 
 ```html
 <fa name="github" alt="github website"></fa>
 <!-- rendered -->
-<i class="fa fa-github" aria-hidden="true"></i>
+<i class="fas fa-github" aria-hidden="true"></i>
 <span class="sr-only">github website</span>
 ```
 
@@ -70,7 +71,7 @@ The icon's font size, either defined by a multiplier (1-5), or by the string `"l
 <fa name="square" size="{{ currentSize }}"></fa>
 <!-- $scope.currentSize = 3 -->
 <!-- rendered -->
-<i class="fa fa-square fa-3x"></i>
+<i class="fas fa-square fa-3x"></i>
 ```
 
 ##### flip
@@ -78,15 +79,23 @@ Flip the icon `horizontal` or `vertical`.
 ```html
 <fa name="pencil" flip="vertical"></fa>
 <!-- rendered -->
-<i class="fa fa-pencil fa-flip-vertical"></i>
+<i class="fas fa-pencil fa-flip-vertical"></i>
+```
+
+##### set
+The icon set. By default the fas (solid) set is used
+```html
+<fa name="twitter" set="fab" rotate="90"></fa>
+<!-- rendered -->
+<i class="fab fa-twitter"></i>
 ```
 
 ##### rotate
 Rotate the icon `90`, `180`, or `270` degrees.
 ```html
-<fa name="floppy-o" rotate="90"></fa>
+<fa name="floppy" rotate="90"></fa>
 <!-- rendered -->
-<i class="fa fa-floppy-o fa-rotate-90"></i>
+<i class="fas fa-floppy fa-rotate-90"></i>
 ```
 
 ##### spin

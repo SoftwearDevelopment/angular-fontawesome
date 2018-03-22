@@ -19,7 +19,7 @@ describe('angular-fontawesome', function () {
       $rootScope.$digest();
     }));
 
-    it('should have the fa class all the time', function () {
+    it('should have the fas class all the time', function () {
        expect(elm.hasClass('fas')).toBe(true);
     });
   });
@@ -50,6 +50,27 @@ describe('angular-fontawesome', function () {
 
         expect(elm.hasClass('fa-square')).not.toBe(true);
         expect(elm.hasClass('fa-book')).toBe(true);
+      });
+    });
+
+    describe('type', function () {
+      var elm, scope;
+
+      beforeEach(inject(function ($rootScope, $compile) {
+        elm = angular.element('<fa name="{{ options.name }}" set="{{ options.set }}"></fa>');
+        scope = $rootScope;
+
+        $rootScope.options = $rootScope.options || {};
+        $rootScope.options.name = 'square';
+        $rootScope.options.set = 'fab';
+
+        $compile(elm)(scope);
+        $rootScope.$digest();
+      }));
+
+      it('should replace base set class', function () {
+        expect(elm.hasClass('fab')).toBe(true);
+        expect(elm.hasClass('fas')).toBe(false);
       });
     });
 
