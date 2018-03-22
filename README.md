@@ -1,18 +1,12 @@
-# angular-fontawesome [![Build Status](https://travis-ci.org/picardy/angular-fontawesome.svg?branch=master)](https://travis-ci.org/picardy/angular-fontawesome)
-
-[![Join the chat at https://gitter.im/picardy/angular-fontawesome](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/picardy/angular-fontawesome?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-http://picardy.github.io/angular-fontawesome/demo/
-
-A simple directive for [FontAwesome](http://fontawesome.io/) icons. Avoid writing a massive `ngStyle` declaration for your FontAwesome integration, and use the power of Angular to make interactive icon-based widgets.
+A simple directive for [FontAwesome 5](https://fontawesome.com/) icons. Avoid writing a massive `ngStyle` declaration for your FontAwesome integration, and use the power of Angular to make interactive icon-based widgets.
 
 ### Usage
 
-1. Include the FontAwesome CSS and fonts in your application by [following their instructions](http://fortawesome.github.io/Font-Awesome/get-started/).
+1. Follow the instructions to include FontAwesome in your project [following their instructions](https://fontawesome.com/get-started).
 
 2. Include the angular-fontawesome module in your Angular app.
     ```javascript
-    angular.module('myApp', ['picardy.fontawesome'])
+    angular.module('myApp', ['sw-fontawesome'])
     ```
 
 3. Use the directive on any page which bootstraps your app.
@@ -100,34 +94,34 @@ Animate the icon to spin. You don't need to provide true to use the boolean attr
 ```html
 <fa name="spinner" spin></fa>
 <!-- rendered -->
-<i class="fa fa-spinner fa-spin"></i>
+<i class="fas fa-spinner fa-spin"></i>
 ```
 You can pass in `true` or `false` to the attribute as well, allowing the spin class to be be easily toggleable.
 ```html
 <fa name="{{ isLoading ? 'spinner' : 'check' }}" spin="{{ isLoading }}"></fa>
 <!-- rendered -->
-<i class="fa fa-spinner fa-spin"></i>
+<i class="fas fa-spinner fa-spin"></i>
 ```
 
 ##### border
 ```html
 <fa name="envelope" border></fa>
 <!-- rendered -->
-<i class="fa fa-envelope fa-border"></i>
+<i class="fas fa-envelope fa-border"></i>
 ```
 
 ##### fixed width
 ```html
 <fa name="book" fw></fa>
 <!-- rendered -->
-<i class="fa fa-book fa-fw"></i>
+<i class="fas fa-book fa-fw"></i>
 ```
 
 ##### inverse
 ```html
 <fa name="home" inverse></fa>
 <!-- rendered -->
-<i class="fa fa-home fa-inverse"></i>
+<i class="fas fa-home fa-inverse"></i>
 ```
 
 ##### list
@@ -143,10 +137,10 @@ This directive autodetects if you're setup to do `fa-li` and then takes care of 
 <!-- rendered -->
 <ul class="fa-ul">
   <li>
-    <i class="fa fa-li fa-square"></i>
+    <i class="fas fa-li fa-square"></i>
     Text here
     <!-- <fa>s that aren't the first <fa> in the <li> do not automatically get the fa-li class -->
-    <i class="fa fa-check"></i>
+    <i class="fas fa-check"></i>
   </li>
 </ul>
 ```
@@ -170,4 +164,4 @@ Failure to do so will render the fonts, just not one on top of another like we w
  * full browser support list
 
 ### License
-MIT Licensed by [Picardy](http://beta.picardylearning.com).
+MIT Licensed

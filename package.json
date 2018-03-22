@@ -1,8 +1,8 @@
 {
-  "name": "angular-fontawesome",
+  "name": "@softwear/angular-fontawesome",
   "version": "1.0.1",
   "author": "Paul Marbach <paul@picardylearning.com>",
-  "description": "Angular directive for FontAwesome",
+  "description": "Angular directive for FontAwesome forked from https://github.com/picardy/angular-fontawesome",
   "scripts": {
     "test": "./node_modules/bower/bin/bower install; ./node_modules/karma/bin/karma start --browsers Chrome --single-run",
     "release": "grunt release"
@@ -10,10 +10,10 @@
   "main": "dist/angular-fontawesome.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/picardy/angular-fontawesome.git"
+    "url": "https://github.com/SoftwearDevelopment/angular-fontawesome.git"
   },
   "bugs": {
-    "url": "https://github.com/picardy/angular-fontawesome/issues"
+    "url": "https://github.com/SoftwearDevelopment/angular-fontawesome/issues"
   },
   "keywords": [
     "angular",
